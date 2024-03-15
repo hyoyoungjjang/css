@@ -62,16 +62,39 @@ li a{
     padding: 20px 0px;
 } 
 
-#nav ul{
+#nav>ul{
     display: flex;
     width: 100%;
     justify-content: space-around;
     align-items: center;
 }
 
+#nav > ul > li{
+    width: 20%;
+    position: relative;
+}
+
+#nav > ul > li ul {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    padding: 10px 0px;
+    background: white;
+    display: none;
+}
+
 #nav li a{
     color: gray;
     font-weight: bold;
+}
+
+#nav > ul > li a:hover+ul{
+    display: block;
+}
+
+#nav > ul ul:hover{
+    display: block;
 }
 
 /* section*/
